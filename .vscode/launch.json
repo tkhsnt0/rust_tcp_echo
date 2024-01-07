@@ -1,0 +1,45 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'echoserver'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=echoserver",
+                    "--package=echoserver"
+                ],
+                "filter": {
+                    "name": "echoserver",
+                    "kind": "bin"
+                }
+            },
+            "args": ["172.17.107.243:50000"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'echoserver'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=echoserver",
+                    "--package=echoserver"
+                ],
+                "filter": {
+                    "name": "echoserver",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
