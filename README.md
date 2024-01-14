@@ -1,7 +1,7 @@
-This repository is rust tcp echo server.
+# rust_tcp_echo
+Tcp echo server in rust.
 
-run server
+# how to use
 ```
 cargo run ip_addr:port
 ```
-
